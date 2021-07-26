@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  s3ninja:
+    build: .docker/s3ninja
+    container_name: s3ninja
+    ports:
+      - "9000:9000"
+    volumes:
+      - ".docker/s3ninja/bucket1:/home/sirius/data/bucket1"
+      - ".docker/s3ninja/bucket2:/home/sirius/data/bucket2"
+    restart: always
+    networks:
+      - s3ninja
+
+networks:
+  s3ninja :
+    driver: bridge

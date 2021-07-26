@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    networks: 
+      - mongo
+
+  mongo-express:
+    image: mongo-express
+    environment: 
+      ME_CONFIG_MONGODB_SERVER: mongo
+    restart: always
+    ports:
+      - "8081:8081"
+    depends_on: 
+      - mongo
+    networks: 
+      - mongo
+
+networks:
+  mongo:
+    driver: bridge

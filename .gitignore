@@ -1,0 +1,6 @@
+/consul/.docker/consul
+/jenkins/.docker/jenkins
+/mysql/.docker/dbdata
+/s3ninja/.docker/s3ninja/bucket1
+/s3ninja/.docker/s3ninja/bucket2
+/servidor ftp/.docker/ftp

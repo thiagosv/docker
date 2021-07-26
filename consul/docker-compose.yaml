@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  consul-server:
+    image: consul:latest
+    command: agent -server -ui -node=server-1 -bootstrap-expect=1 -client=0.0.0.0 -data-dir /consul/data
+    volumes:
+      - ./.docker/consul/data/:/consul/data/
+    ports:
+      - "8500:8500"
+      - "8600:8600/udp"
+    networks:
+      - consul
+networks:
+  consul:
+    driver: bridge
