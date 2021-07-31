@@ -2,7 +2,7 @@ version: '3.1'
 
 services:
 
-  db:
+  postgres:
     image: postgres
     restart: always
     ports:
@@ -11,9 +11,16 @@ services:
       POSTGRES_USER: docker
       POSTGRES_PASSWORD: docker
       POSTGRES_DATABASE: tsauth
+    networks: 
+      - postgres
 
   adminer:
     image: adminer
     restart: always
     ports:
-      - 8080:8080
+      - 5433:8080
+    networks: 
+      - postgres
+networks: 
+  postgres:
+    driver: bridge

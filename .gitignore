@@ -4,3 +4,5 @@
 /s3ninja/.docker/s3ninja/bucket1
 /s3ninja/.docker/s3ninja/bucket2
 /servidor ftp/.docker/ftp
+/grafana/.docker/grafana
+/influxdb/.docker/influxdb
