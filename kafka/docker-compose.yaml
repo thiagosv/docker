@@ -9,7 +9,7 @@ services:
     networks:
       - kafka
   kafka:
-    image: confluentinc/cp-kafka:latest
+    image: confluentinc/cp-kafka:7.2.4
     depends_on:
       - zookeeper
     ports:
