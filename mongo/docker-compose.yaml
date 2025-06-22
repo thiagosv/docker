@@ -13,6 +13,7 @@ services:
     image: mongo-express
     environment: 
       ME_CONFIG_MONGODB_SERVER: mongo
+      ME_CONFIG_BASICAUTH: false
     restart: always
     ports:
       - "8081:8081"
