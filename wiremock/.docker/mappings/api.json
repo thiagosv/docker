@@ -1,0 +1,22 @@
+{
+    "mappings":[{
+        "name": "/api",
+        "request": {
+            "urlPathTemplate": "/api/{id}",
+            "method": "POST"
+        },
+        "response": {
+            "headers": {
+                "Content-Type": "application/json"
+            },
+            "status": "201",
+            "bodyFileName": "response.json",
+            "delayDistribution": {
+                "type": "uniform",
+                "lower": 100,
+                "upper": 1000
+            }
+        },
+        "persistent": true
+    }]
+}

@@ -1,0 +1,11 @@
+{{parseJson request.body 'bodyJson'}}
+{
+    "id": {{request.path.id}},
+    "valido": {{pickRandom false true false false}},
+    "id2": {{randomInt lower=1}},
+    "teste": {{bodyJson.id}},
+    "teste2": {{bodyJson.id}},
+    "date": "{{now offset='-20 years' format='yyyy-MM-dd'}}",
+    "UUID": "{{randomValue type='UUID'}}",
+    "id": "{{randomValue length=24 type='ALPHANUMERIC'}}"
+}
